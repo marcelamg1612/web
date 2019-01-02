@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox container</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#conteudo {
+			background: #dcdcdc;
+			height: 400px;		
+			display: flex;
+
+			/* row, row-reverse, column, column-reverse */
+			flex-direction: row;
+
+			/* nowrap, wrap, wrap-reverse */
+			flex-wrap: nowrap;
+
+			/* flex-start, flex-end, center, space-between, space-around */
+			justify-content: center;
+		}
+		.item {
+			background: #fff;
+			border: 1px solid #ccc;
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="conteudo">
+		<div class="item">01</div>
+		<div class="item">02</div>
+		<div class="item">03</div>
+		<div class="item">04</div>
+	</div>
+</body>
+</html>
