@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let data = new Date();
+
+        //recupera  o dia de acordo com o sistema operacional
+        document.write(data.getDate() + '/' + data.getMonth() + '/' + data.getFullYear());
+
+        //adicionar ou remover dias da data        
+        data.setDate(data.getDate() + 1);
+        document.write('<hr/>');
+        document.write(data.toString());
+
+
+    </script>
+</body>
+</html>
