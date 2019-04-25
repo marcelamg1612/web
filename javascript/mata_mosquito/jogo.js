@@ -1,6 +1,7 @@
 let altura = 0;
 let largura = 0;
 let vidas = 1;
+let tempo = 10;
 
 //capturando o tamanho a tela
 function ajustaTamanho() {
@@ -10,14 +11,24 @@ function ajustaTamanho() {
 
 ajustaTamanho();
 
+let cronometro = setInterval(function(){
+    tempo -= 1
+    if(tempo < 0){
+        clearInterval(cronometro);
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo;    
+    }    
+}, 1000);
+
 //inserindo valor randomico para a posição do mosquito dentro do espaço da tela
 function posicaoRandomica() {
   //remover mosquito anterior caso exista
   if (document.getElementById('mosquito')) {
-    
     document.getElementById('mosquito').remove();
 
-    if (vidas < 4) {
+    if (vidas > 3) {
+        window.location.href = 'game_over.html'
+    } else {
       document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png';
       vidas++;
     }
